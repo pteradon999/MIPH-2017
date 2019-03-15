@@ -1,0 +1,67 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="WHOLE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ENTITY">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NAME" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="LASTNAME"/>
+                    <xs:element type="xs:string" name="FIRSTNAME"/>
+                    <xs:element type="xs:string" name="MIDDLENAME"/>
+                    <xs:element type="xs:string" name="WHOLENAME"/>
+                    <xs:element type="xs:string" name="GENDER"/>
+                    <xs:element type="xs:string" name="TITLE"/>
+                    <xs:element type="xs:string" name="FUNCTION"/>
+                    <xs:element type="xs:string" name="LANGUAGE"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="Id" use="optional"/>
+                  <xs:attribute type="xs:byte" name="Entity_id" use="optional"/>
+                  <xs:attribute type="xs:date" name="reg_date" use="optional"/>
+                  <xs:attribute type="xs:string" name="pdf_link" use="optional"/>
+                  <xs:attribute type="xs:string" name="programme" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="BIRTH">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:date" name="DATE"/>
+                    <xs:element type="xs:string" name="PLACE"/>
+                    <xs:element type="xs:string" name="COUNTRY"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="Id"/>
+                  <xs:attribute type="xs:byte" name="Entity_id"/>
+                  <xs:attribute type="xs:date" name="reg_date"/>
+                  <xs:attribute type="xs:string" name="pdf_link"/>
+                  <xs:attribute type="xs:string" name="programme"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PASSPORT">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="NUMBER"/>
+                    <xs:element type="xs:string" name="COUNTRY"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="Id"/>
+                  <xs:attribute type="xs:byte" name="Entity_id"/>
+                  <xs:attribute type="xs:date" name="reg_date"/>
+                  <xs:attribute type="xs:string" name="pdf_link"/>
+                  <xs:attribute type="xs:string" name="programme"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="PIEZIMES"/>
+            </xs:sequence>
+            <xs:attribute type="xs:byte" name="Id"/>
+            <xs:attribute type="xs:string" name="Type"/>
+            <xs:attribute type="xs:date" name="reg_date"/>
+            <xs:attribute type="xs:string" name="pdf_link"/>
+            <xs:attribute type="xs:string" name="programme"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="Date"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
